@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Photo1 from "../../Assets/ServicesPage_Assets/ui-ux.png";
-import Photo2 from "../../Assets/backend dev.png";
-import Photo3 from "../../Assets/app dev.png";
+
 import styles from "./Carousel.module.css";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -26,7 +24,7 @@ const Carousel = () => {
 
   useEffect(() => {
     const ospin = spinRef.current;
-    const odrag = dragRef.current;
+    // const odrag = dragRef.current;
     const aEle = [...ospin.getElementsByTagName('a')]; // Change 'img' to 'a'
 
     ospin.style.width = imgWidth + "px";

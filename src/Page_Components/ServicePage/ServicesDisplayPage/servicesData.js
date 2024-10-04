@@ -5,7 +5,7 @@ import f_illustration_4 from "../../../Assets/ServicesPage_Assets/Illustration_4
 import f_illustration_5 from "../../../Assets/ServicesPage_Assets/Illustration_5.png";
 import ui_ux_new from "../../../Assets/ServicesPage_Assets/ui-ux.png"
 import webdev from "../../../Assets/ServicesPage_Assets/FrontendDevelopment.jpg";
-// import backend from "../../../Assets/ServicesPage_Assets/BackendDevelopment.png";
+
 import backend from "../../../Assets/ServicesPage_Assets/backend.png"
 import appdev from "../../../Assets/ServicesPage_Assets/AndroidDevelopment.png"
 import b_illustration_1 from "../../../Assets/ServicesPage_Assets/B_Illustration_1.png";
@@ -25,11 +25,7 @@ import u_illustration_3 from "../../../Assets/ServicesPage_Assets/U_Illustration
 import u_illustration_4 from "../../../Assets/ServicesPage_Assets/U_Illustration_4.png";
 import u_illustration_5 from "../../../Assets/ServicesPage_Assets/U_Illustration_5.jpg";
 
-import frontend_Illustration from "../../../Assets/ServicesPage_Assets/FrontendDevelopment.jpg";
-import backend_Illustration from "../../../Assets/ServicesPage_Assets/BackendDevelopment.png";
 
-import android_Illustration from "../../../Assets/ServicesPage_Assets/AndroidDevelopment.png";
-import UI_UX_Illustration from "../../../Assets/ServicesPage_Assets/UI-UX-Designing.png";
 
 export const frontend_data = [
   {

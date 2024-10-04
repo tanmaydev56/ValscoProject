@@ -21,7 +21,7 @@ const BlogPage = (props) => {
   const blogsFinal = blogs.length > 3 ? [blogs[0], blogs[1], blogs[2]] : blogs;
   useEffect(() => {
     getSinglePost(ID);
-  }, [ID]);
+  }, [ID,getSinglePost]);
 
   const { title, postText, author, publishDate, ImgSrc } = singleBlog;
   if (isSingleLoading === true) {

@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "./ServiceDisplay.css";
 import { services } from "./servicesData";
 import Footer from "../../../Components/Footer/Footer";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/pagination";
 

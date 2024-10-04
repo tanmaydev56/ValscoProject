@@ -8,27 +8,27 @@ const HoverImage = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const x = event.clientX - containerRect.left;
-      const y = event.clientY - containerRect.top;
-      setPosition({ x, y });
-      setIsHovered(
-        x >= 0 &&
-          x <= containerRect.width &&
-          y >= 0 &&
-          y <= containerRect.height
-      );
-    };
-
-    containerRef.current?.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      containerRef.current?.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
+ useEffect(() => {
+   const container = containerRef.current; // Store the value in a variable
+   const handleMouseMove = (event) => {
+     const containerRect = container.getBoundingClientRect();
+     const x = event.clientX - containerRect.left;
+     const y = event.clientY - containerRect.top;
+     setPosition({ x, y });
+     setIsHovered(
+       x >= 0 &&
+         x <= containerRect.width &&
+         y >= 0 &&
+         y <= containerRect.height
+     );
+   };
+ 
+   container?.addEventListener("mousemove", handleMouseMove);
+ 
+   return () => {
+     container?.removeEventListener("mousemove", handleMouseMove);
+   };
+ }, []);
   const imageStyle = {
     position: "absolute",
     width: "400px",
