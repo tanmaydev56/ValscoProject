@@ -386,7 +386,7 @@ function App() {
 
         <Route exact path="/success" element={<Success />} />
         <Route exact path="/failure" element={<Failure />} />
-         {/* <Route path="/checkOutForm" element={<CheckOutForm/>}/> */}
+         <Route path="/checkOutForm" element={<CheckOutForm/>}/>
       </Routes>
     </Router>
     // <CategoryGrid/>
