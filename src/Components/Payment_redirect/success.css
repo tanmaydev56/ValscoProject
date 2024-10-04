@@ -1,0 +1,56 @@
+.payment_container {
+    width: 100%;
+    background-color: #EEF3EFff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.payment_container h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    word-wrap: normal;
+}
+
+.payment_container h2 {
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+}
+
+.payment_container .illustation_container {
+    max-width: 440px;
+}
+
+.payment_container .illustation_container img {
+    width: 100%;
+}
+
+.payment_container a {
+    padding: 10px;
+    max-width: 350px;
+    min-width: 250px;
+    font-size: 1.5rem;
+    background-color: #41DDB5;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.payment_container a:hover {
+    transform: scale(1.02);
+    background-color: #258069;
+}
+
+@media (max-width : 500px) {
+    .payment_container h1 {
+        font-size: 2.3rem;
+    }
+
+    .payment_container h2 {
+        font-size: 1.2rem;
+    }
+}

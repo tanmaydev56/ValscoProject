@@ -1,0 +1,146 @@
+.services-container-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 7% 2rem;
+    gap: 2rem;
+}
+
+.service-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    /* flex: 1; */
+    width: fit-content;
+    /* min-width: 320px; */
+    /* max-width: 320px; */
+    margin: 1rem auto;
+}
+
+.service-wrapper:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.services-container-body h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.services-swiper {
+    display: flex;
+    gap: 1rem;
+    /* overflow: hidden; */
+    cursor: pointer;
+    min-width: 320px;
+    padding: 1rem;
+}
+
+.service-card-img {
+    height: 180px;
+    width: 100%;
+}
+
+.service-card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-card-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1rem;
+}
+
+.service-card-details h2 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.service-nav-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.service-nav-buttons button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.service-card-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-width: 100px; */
+}
+
+.service-nav-buttons .check_it {
+    color: #000;
+    border: 2px solid #000;
+    background-color: white;
+}
+
+.service-nav-buttons .register {
+    background: #01004B;
+    color: #FFF;
+    border: 2px solid white;
+}
+
+.service-nav-buttons .check_it:hover {
+    background-color: #01004B;
+    color: #fff;
+    border-color: #fff;
+}
+
+.service-nav-buttons .register:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+.courses-swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-wrapper {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    margin-bottom: 2rem;
+}
+.BackroundA{
+    display: flex;
+    width: 100%;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}

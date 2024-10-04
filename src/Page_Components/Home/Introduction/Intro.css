@@ -1,0 +1,126 @@
+.landing_wrapper {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 7%;
+    background: rgb(5, 67, 79);
+    background: linear-gradient(90deg,
+            rgba(26, 165, 193, 0.7) 0%,
+            rgba(57, 155, 177, 0.7) 90%,
+        );
+    background: -moz-linear-gradient(90deg,
+            rgba(40, 120, 149, 0.7) 90%,
+            rgba(5, 67, 79, 0.7) 100%);
+    background: -webkit-linear-gradient(90deg,
+            rgb(253, 254, 254) 5%,
+            rgb(122, 205, 235) 70%,
+            rgba(0, 88, 183, 0.785) 100%);
+    opacity: 1;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+.landing_img img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+}
+
+.landing_desc {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing_desc * {
+    font-family: sans-serif;
+}
+
+.landing_desc h1 {
+    font-weight: 600;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.landing_desc p {
+    width: 30vw;
+    margin-top: 10px;
+}
+
+.learn_btn {
+    position: relative;
+    border: 2px solid black;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: auto;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    gap: 5px;
+    font-weight: 700;
+}
+
+.learn_btn_icon {
+    font-size: 1.2rem;
+}
+
+.learn_btn:hover .learn_btn_icon {
+    font-size: 1.5rem;
+}
+
+.learn_btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, hsl(192.1, 89.4%, 63.1%) 0%, hsl(219.4, 70%, 80.4%) 0%, hsl(289.6, 77.5%, 82.5%) 100%);
+    /* background: linear-gradient(90deg, hsla(207, 96%, 69%, 1) 0%, hsla(220, 97%, 64%, 1) 0%, hsla(192, 89%, 63%, 1) 100%); */
+    z-index: -1;
+    clip-path: circle(35.5% at 0 100%);
+    transition: 0.5s ease-in-out;
+}
+
+.learn_btn:hover {
+    /* color: white; */
+    color: black;
+    border: 2px solid white;
+}
+
+.learn_btn:hover::before {
+    clip-path: circle(140.9% at 0 100%);
+}
+
+
+@media (max-width:1000px) {
+    .landing_wrapper {
+        margin-top: -5rem;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    .landing_desc {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .landing_desc h1 {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .landing_img img {
+        scale: 0.8;
+    }
+
+    .landing_desc p {
+        width: 100%;
+    }
+}

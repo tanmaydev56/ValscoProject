@@ -1,0 +1,170 @@
+.createBlog {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.createBlog h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.createBlog .title-blog {
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 15px 0;
+    border-radius: 2px;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.createBlog .title-blog::placeholder {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.Blog-img-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Blog-img-section .BlogImg_Demo {
+    width: 100%;
+    max-height: 80vh;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.Blog-img-section .BlogImg_Demo img {
+    width: 100%;
+    height: 100%;
+}
+
+.input-handles {
+    display: flex;
+    margin: auto;
+    width: 380px;
+    gap: 10px;
+    --b: 5px;
+    --h: 1.8em;
+}
+
+.input-handles input,
+.input-handles button {
+    --_c: #88C100;
+    flex: calc(1.25 + var(--_s, 0));
+    justify-content: center;
+    cursor: pointer;
+    color: var(--_c);
+    border: var(--b) solid var(--_c);
+    background:
+        conic-gradient(at calc(100% - 1.3*var(--b)) 0, var(--_c) 209deg, #0000 211deg) border-box;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 0.577*var(--h)) 100%, 0 100%);
+    padding: 1rem;
+    margin: 0 calc(-0.288*var(--h)) 0 0;
+    box-sizing: border-box;
+    transition: flex .4s;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.input-handles input+button {
+    --_c: #FF003C;
+    flex: calc(.75 + var(--_s, 0));
+    background:
+        conic-gradient(from -90deg at calc(1.3*var(--b)) 100%, var(--_c) 119deg, #0000 121deg) border-box;
+    clip-path: polygon(calc(0.577*var(--h)) 0, 100% 0, 100% 100%, 0 100%);
+    margin: 0 0 0 calc(-0.288*var(--h));
+    padding: 0 0 0 calc(0.288*var(--h));
+}
+
+.input-handles input:focus-visible {
+    outline-offset: calc(-2*var(--b));
+    outline: calc(var(--b)/2) solid #000;
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-handles input:focus-visible+button {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-handles input:has(+ button:focus-visible) {
+    background: none;
+    clip-path: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-handles *:hover,
+.input-handles *:active:not(:focus-visible) {
+    --_s: .75;
+}
+
+.input-handles *:active {
+    box-shadow: inset 0 0 0 100vmax var(--_c);
+    color: #fff;
+}
+
+.type-blog {
+    padding: 20px;
+    margin: 15px 0;
+    height: 200px;
+    border-radius: 2px;
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.type-blog::placeholder {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    border-color: green;
+}
+
+.create-blog-btn {
+    width: 150px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 5px solid #88C100;
+    margin: auto;
+    color: black;
+    background:
+        conic-gradient(at calc(100% - 1.3*5px) 0, #88C100 209deg, #0000 211deg) border-box;
+    clip-path: polygon(0 0, 100% 0, calc(100%) 100%, 0 100%);
+    cursor: pointer;
+    color: #88C100;
+}
+
+.create-blog-btn:hover {
+    width: 165px;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width:600px) {
+    .createBlog h1 {
+        font-size: 2rem;
+    }
+
+    .createBlog .title-blog {
+        font-size: 1.2rem;
+    }
+
+    .input-handles {
+        width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "pt.valsco.jurident",
+      "sha256_cert_fingerprints": [
+        "4D:91:EB:F0:24:B1:00:97:A8:C4:0A:0A:51:45:32:52:5E:FC:BC:7A:0F:6F:25:53:94:86:14:0C:4B:77:7F:10"
+      ]
+    }
+  }
+]

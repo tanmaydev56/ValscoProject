@@ -1,0 +1,62 @@
+.hero_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+}
+
+.mock1 {
+  transition: 0.6s;
+  max-width: 280px;
+  width: 100%;
+}
+
+.iphone1 {
+  transition: 1s;
+  transform: translateX(95px);
+  z-index: 9;
+}
+
+.iphone2 {
+  transition: 10000s;
+}
+
+.iphone3 {
+  transition: 1s;
+  transform: translateX(-95px);
+  z-index: 9;
+}
+
+.iphone2:hover {
+  margin: 0 15%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .hero_products {
+    min-height: 75vh;
+  }
+
+  .iphone1,
+  .iphone3 {
+    transform: translateX(0);
+  }
+
+  .iphone1 {
+    margin-right: -10%;
+  }
+
+  .iphone3 {
+    margin-left: -10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero_products {
+    min-height: 50vh;
+  }
+}

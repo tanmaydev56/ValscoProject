@@ -1,0 +1,200 @@
+
+  
+  /* Custom scrollbar styles (including mobile) */
+  body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #000; /* Track (background) color of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white; /* Scrollbar thumb color */
+    border-radius: 10px; /* Round corners of the scrollbar */
+    border: 3px solid #000; /* Adds a border to the thumb with the same color as the background to create a gap effect */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #e7e0e09e; /* Change color on hover */
+  }
+  
+  .bodyy {
+    overflow-y: auto;
+    touch-action: none;
+  }
+  
+  /* Applying overflow for vertical scroll on mobile */
+  .bodyy {
+   /* Disable horizontal scrolling */
+    display: flex;
+    background: #000;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  .dragContainer, .spinContainer {
+    position: absolute;
+    z-index: -100;
+    display: flex;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+  }
+  
+  .dragContainer img {
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px #FFF;
+    box-reflect: below 10px linear-gradient(transparent, transparent, #0006);
+    
+  }
+  
+  .dragContainer img:hover {
+    box-shadow: 0 0 20px #FFF;
+  }
+  
+  .ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    background: radial-gradient(circle, #9993, transparent);
+  }
+  
+  .dragContainer {
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .spinContainer {
+    width: 250px; /* Controlled by JS */
+    height: 380px; /* Controlled by JS */
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .buttonn {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttonn:hover {
+    background-color: rgba(255, 255, 255, 0.656);
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  @keyframes spinRevert {
+    from {
+      transform: rotateY(360deg);
+    }
+    to {
+      transform: rotateY(0deg);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For laptops and larger screens */
+  @media (min-width: 1024px) {
+    .spinContainer {
+      width: 350px;
+      height: 500px;
+    }
+  
+    .buttonn {
+      padding: 25px;
+    }
+  }
+  
+  /* For tablets */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .spinContainer {
+      width: 300px;
+      height: 450px;
+    }
+  
+    .buttonn {
+      padding: 20px;
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 767px) {
+    body {
+      perspective: 800px; /* Reduce perspective for mobile */
+    }
+  
+    .spinContainer {
+      width: 220px;
+      height: 320px;
+    }
+  
+    .controls {
+      bottom: 45px; /* Move controls closer to the bottom */
+    }
+  
+    .buttonn {
+      padding: 15px;
+      font-size: 24px;
+    }
+  
+    /* Adjust scrollbar width for mobile */
+    .bodyy::-webkit-scrollbar {
+      width: 10px; /* Smaller width on mobile */
+    }
+  
+    .bodyy::-webkit-scrollbar-thumb {
+      background-color: #ccc; /* Lighter color on mobile */
+    }
+  
+    .bodyy::-webkit-scrollbar-thumb:hover {
+      background-color: #999; /* Darker color on hover on mobile */
+    }
+  
+    .bodyy::-webkit-scrollbar-track {
+      background-color: #f5f5f5; /* Lighter color on mobile */
+    }
+  
+    .bodyy::-webkit-scrollbar-track:hover {
+      background-color: #ddd; /* Darker color on hover on mobile */
+    }
+  }
+  

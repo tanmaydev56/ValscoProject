@@ -1,0 +1,432 @@
+.service-main-body {
+    padding: 4rem 7%;
+}
+
+.service-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-hero-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.service-hero-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+}
+
+.service-hero-content p {
+    color: rgba(0, 0, 0, 0.46);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.service-hero-content p strong {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.start-today-btn {
+    text-align: center;
+    border-radius: 10px;
+    background: #01004B;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.start-today-btn:hover {
+    background-color: transparent;
+    color: #01004B;
+    border-color: #01004B;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.section-hero-img,
+.steps-details {
+    width: 50%;
+}
+
+.steps-image {
+    width: 35%;
+    text-align: center;
+}
+
+.steps-image img {
+    width: 100%;
+}
+
+.section-hero-img img {
+    margin-left: auto;
+    /* Code for Alt Text to be at center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-service-steps {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 2rem;
+    margin: 7rem 0;
+}
+
+.about-service-steps.odd {
+    flex-direction: row-reverse;
+}
+
+.steps-details h2 {
+    margin-bottom: 3rem;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.steps-details ul {
+    list-style: none;
+}
+
+.steps-details ul li,
+.arrow {
+    display: flex;
+    gap: 1rem;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.steps-img img {
+    margin: auto;
+    display: block;
+    width: 75%;
+}
+
+.service-offers {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.to_enroll,
+.to_enroll_btn {
+    padding: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #FC346C;
+    background: linear-gradient(90deg, #D64045 5.38%, #EE395E 62.94%, #FE346E 100%);
+    margin: auto;
+}
+
+.to_enroll_btn {
+    padding: 2rem;
+}
+
+.to_enroll h2 {
+    color: #FFF;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+
+.to_enroll:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.promting-offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: inherit;
+}
+
+.offer-div {
+    padding: 2rem;
+    border-radius: 10px;
+    background: #01004B;
+    min-height: 364px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 432px;
+}
+
+.offer-div img {
+    margin-bottom: 1rem;
+}
+
+.offer-div h4,
+.offer-div p {
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.FAQ {
+    margin: 6rem 0;
+}
+
+.FAQ h2 {
+    color: #000;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+details {
+    margin-top: 3rem;
+    border-radius: 8px;
+    background: #467599;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+summary {
+    position: relative;
+    color: #fff;
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary:after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+details[open] summary {
+    margin-bottom: .5em;
+}
+
+details[open] summary:after {
+    content: "";
+    border-top: 15px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid white;
+    transition: 0.5s ease-in-out;
+}
+
+details[open] p {
+    padding: .5em 1em;
+    color: #fff;
+
+}
+
+.offer-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.offer-timer h3 {
+    color: #000;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.offer-timer .time {
+    color: #000;
+    text-align: center;
+    font-size: 138px;
+    font-weight: 700;
+}
+
+.offer-notice {
+    color: #FD346D;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.course-register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 7%;
+    gap: 1rem;
+}
+
+.course-register-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.course-register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.course-register-form .Std-Name {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.course-register-form .input-container {
+    position: relative;
+    flex: 1;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.course-register-form .input-container input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--Input-border-color, #D2D5DA);
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+}
+
+.course-register-form .input-container label {
+    position: absolute;
+    top: -0.8rem;
+    left: 1rem;
+    background: white;
+    padding: 0 10px;
+}
+
+.course-register-form .condition-check {
+    text-align: center;
+}
+
+.course-register-form .condition-check label {
+    position: initial;
+    background: transparent;
+}
+
+.course-register-form .condition-check input {
+    width: fit-content;
+}
+
+.form-closeBtn {
+    position: absolute;
+    right: 1rem;
+    top: -3rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.course-register-form button {
+    border-radius: 8px;
+    background: #FC346C;
+    padding: 20px;
+    width: fit-content;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .section-hero-img,
+    .steps-details {
+        width: auto;
+    }
+
+    .steps-details h2 {
+        font-size: 2rem;
+    }
+
+    .steps-details ul li,
+    .arrow {
+        font-size: 18px;
+    }
+
+    .steps-image {
+        width: 80%;
+    }
+
+    .offer-div {
+        max-width: none;
+        width: 100%;
+    }
+
+    .offer-timer .time {
+        font-size: 7rem;
+    }
+
+    .offer-timer .to_enroll {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .service-hero {
+        flex-direction: column-reverse;
+    }
+
+    .course-register-form .Std-Name {
+        flex-direction: column;
+    }
+
+    .about-service-steps.odd,
+    .about-service-steps {
+        flex-direction: column;
+    }
+
+    .steps-details h2 {
+        font-size: 2rem;
+    }
+
+    .steps-details ul li,
+    .arrow {
+        font-size: 18px;
+    }
+
+    .to_enroll {
+        width: 100%;
+        margin: 4rem 0;
+        padding: 2rem;
+    }
+
+    .to_enroll h2 {
+        font-size: 1.8rem;
+    }
+
+    .offer-timer h3 {
+        font-size: 2rem;
+    }
+
+    .offer-timer .time {
+        font-size: 3rem;
+    }
+
+}
