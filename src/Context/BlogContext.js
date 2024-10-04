@@ -48,7 +48,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     getPosts();
-  }, [getPosts]);
+  }, []);
 
   return (
     <AppContext.Provider value={{ ...state, getSinglePost }}>

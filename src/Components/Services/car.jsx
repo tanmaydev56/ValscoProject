@@ -53,18 +53,16 @@ const Carousel = () => {
     <div className={styles.bodyy}>
       <div id="drag-container" className={styles.dragContainer} ref={dragRef}>
         <div id="spin-container" className={styles.spinContainer} ref={spinRef}>
+        <Link to="/success" target="_blank" rel="noopener noreferrer">
+  <img src="/ui-ux.jpg" alt="UI/UX course" className='object-cover w-[100%] h-[100%]' />
+</Link>
 
-          {/* Wrap each image in an anchor tag and ensure the 3D effect is applied to the anchor tag */}
-          <Link to="/checkOutForm?course=UI-UX" target="_blank" rel="noopener noreferrer">
-            <img src="/ui-ux.jpg" alt="Image 1" className='object-cover w-[100%] h-[100%]' />
-          </Link>
+<Link to="/success" target="_blank" rel="noopener noreferrer">
+  <img src="/webDev4.jpg" alt="Web Development course" />
+</Link>
 
-          <Link to="/checkOutForm?course=WebDevelopment" target="_blank" rel="noopener noreferrer">
-            <img src="/webDev4.jpg" alt="Image 2" />
-            </Link>
-
-            <Link to="/checkOutForm?course=AppDev" target="_blank" rel="noopener noreferrer">
-  <img src="/AppDev.jpg" alt="Image 3" />
+<Link to="/success" target="_blank" rel="noopener noreferrer">
+  <img src="/AppDev.jpg" alt="App Development course" />
 </Link>
 
 
@@ -81,5 +79,5 @@ const Carousel = () => {
     </div>
   );
 };
-
+// checkOutForm?course=AppDev
 export default Carousel;

@@ -88,7 +88,7 @@ const CheckOutForm = () => {
             Get Your Quotation
           </h1>
 
-          {/* Render the message */}
+        
           {msg && <p className="text-green-500 text-center">{msg}</p>}
 
           <div className="flex flex-col space-y-1">
@@ -181,7 +181,7 @@ const CheckOutForm = () => {
           <button 
             type="submit" 
             className="w-full cursor-pointer inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-            disabled={isValid || sending} 
+            disabled={!isValid || sending} 
           >
             {sending ? "Sending..." : "Get Service"}
           </button>
