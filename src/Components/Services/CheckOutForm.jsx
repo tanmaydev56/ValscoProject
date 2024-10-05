@@ -3,7 +3,7 @@ import "../Footer/Footer.css";
 import { createDoc } from "../../Firebase_Config/firebaseConfig";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import queryString from "query-string";
+
 import { useLocation } from "react-router-dom";
 const backendURL = "https://mailing-backend.onrender.com";
 
@@ -21,12 +21,7 @@ const CheckOutForm = () => {
   const [isValid, setIsValid] = useState(true);
   // const [isSuccess, setIsSuccess] = useState(false);
 
-  useEffect(() => {
-    const { course } = queryString.parse(window.location.search);
-    if (course) {
-      setNewContact((prevContact) => ({ ...prevContact, course }));
-    }
-  }, []);
+ 
 
   const handleOnChange = (e) => {
     setNewContact({ ...newContact, [e.target.name]: e.target.value });
@@ -71,9 +66,10 @@ const CheckOutForm = () => {
     }
   };
   useEffect(() => {
-    const { course } = queryString.parse(location.search); // Parse the query string
+    const params = new URLSearchParams(location.search);
+    const course = params.get('course');
     if (course) {
-      setNewContact((prevContact) => ({ ...prevContact, course })); // Set course if it exists
+      setNewContact((prevContact) => ({ ...prevContact, course }));
     }
   }, [location.search]);
 
@@ -164,25 +160,23 @@ const CheckOutForm = () => {
           </div>
 
           <div className="flex flex-col space-y-1">
-            <label htmlFor="course" className="text-sm font-medium">
-              Selected Service
-            </label>
-            <select
-              id="course"
-              onChange={handleOnChange}
-              value={newContact.course}
-              name="course"
-              required
-              className="p-3 bg-black border-gray-300 rounded-md focus:outline-none border"
-            >
-              {newContact.course === "" && (
-                <option value="" disabled>Select a Service</option>
-              )}
-              <option value="WebDev">Web Development</option>
-              <option value="AppDev">App Development</option>
-              <option value="UI-UX">UI/UX Design</option>
-            </select>
-          </div>
+      <label htmlFor="course" className="text-sm font-medium">
+        Selected Service
+      </label>
+      <select
+        id="course"
+        onChange={handleOnChange}
+        value={newContact.course}
+        name="course"
+        required
+        className="p-3 bg-black border-gray-300 rounded-md focus:outline-none border"
+      >
+        <option value="" disabled>Select a Service</option>
+        <option value="WebDev">Web Development</option>
+        <option value="AppDev">App Development</option>
+        <option value="UI-UX">UI/UX Design</option>
+      </select>
+    </div>
 
           <button 
             type="submit" 
