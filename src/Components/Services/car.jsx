@@ -57,11 +57,11 @@ const Carousel = () => {
   <img src="/ui-ux.jpg" alt="UI/UX course" className='object-cover w-[100%] h-[100%]' />
 </Link>
 
-<Link to="/success" target="_blank" rel="noopener noreferrer">
+<Link to="/checkOutForm?course=WebDev" target="_blank" rel="noopener noreferrer">
   <img src="/webDev4.jpg" alt="Web Development course" />
 </Link>
 
-<Link to="/success" target="_blank" rel="noopener noreferrer">
+<Link to="/checkOutForm?course=AppDev" target="_blank" rel="noopener noreferrer">
   <img src="/AppDev.jpg" alt="App Development course" />
 </Link>
 
