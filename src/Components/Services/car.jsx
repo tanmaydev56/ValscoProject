@@ -53,7 +53,7 @@ const Carousel = () => {
     <div className={styles.bodyy}>
       <div id="drag-container" className={styles.dragContainer} ref={dragRef}>
         <div id="spin-container" className={styles.spinContainer} ref={spinRef}>
-        <Link to="/success" target="_blank" rel="noopener noreferrer">
+        <Link to="/checkOutForm?course=UI-UX" target="_blank" rel="noopener noreferrer">
   <img src="/ui-ux.jpg" alt="UI/UX course" className='object-cover w-[100%] h-[100%]' />
 </Link>
 

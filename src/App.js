@@ -5,6 +5,7 @@ import Alert from "./Components/Alerts/Alert";
 import Slider from "./Components/BlogSlider/Slider";
 import Footer from "./Components/Footer/Footer";
 import HomeNav from "./Components/Navbars/HomeNav";
+import CheckOutForm from "./Components/Services/CheckOutForm.jsx";
 
 import ServiceNavBar from "./Components/Navbars/ServiceNavBar.js";
 import UserNav from "./Components/Navbars/UserNav"; // Used for [Login page], [Create Blog Page] and [Read Blogs Page] only
@@ -29,7 +30,7 @@ import TermsAndConditionPageBody from "./Page_Components/TermsConditionPage/Term
 
 import NewService from "./Components/Services/NewService.jsx";
 import CategoryGrid from "./Components/Services/IconMenu.jsx";
-import CheckOutForm from "./Components/Services/CheckOutForm.jsx";
+
 
 
 
@@ -386,7 +387,7 @@ function App() {
 
         <Route exact path="/success" element={<Success />} />
         <Route exact path="/failure" element={<Failure />} />
-         <Route path="/checkOutForm" element={<CheckOutForm/>}/>
+        <Route path="/checkOutForm" element={<CheckOutForm />} />
       </Routes>
     </Router>
     // <CategoryGrid/>

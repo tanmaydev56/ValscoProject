@@ -4,7 +4,7 @@ import { createDoc } from "../../Firebase_Config/firebaseConfig";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import queryString from "query-string";
-
+import { useLocation } from "react-router-dom";
 const backendURL = "https://mailing-backend.onrender.com";
 
 const CheckOutForm = () => {
@@ -15,7 +15,7 @@ const CheckOutForm = () => {
     company: "",
     course: "",
   });
-
+  const location = useLocation();
   const [msg, setMsg] = useState("");
   const [sending, setSending] = useState(false);
   const [isValid, setIsValid] = useState(true);
@@ -70,6 +70,12 @@ const CheckOutForm = () => {
       setMsg(`The Following Error Occurred: ${error.message}.\nKindly Try Again!`);
     }
   };
+  useEffect(() => {
+    const { course } = queryString.parse(location.search); // Parse the query string
+    if (course) {
+      setNewContact((prevContact) => ({ ...prevContact, course })); // Set course if it exists
+    }
+  }, [location.search]);
 
   return (
     <>
