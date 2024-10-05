@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGraduationCap, FaShippingFast, FaDumbbell, FaHome, FaComments, FaShoppingCart, FaLaptop, FaUsers, FaBuilding } from 'react-icons/fa';
 
 // Category data with imported icons and SVGs
 const categories = [
