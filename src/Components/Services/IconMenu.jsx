@@ -18,7 +18,8 @@ const CategoryGrid = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col gap-10 items-center  justify-center">
       <h1 className='  
-      text-5xl text-white font-bold  '>Services Provided To</h1>
+      lg:text-5xl text-3xl 
+      text-white font-bold  '>Services Provided To</h1>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 max-w-5xl">
         {categories.map((category, index) => (
           <div
