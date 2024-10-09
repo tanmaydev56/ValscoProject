@@ -50,18 +50,18 @@ const Carousel = () => {
   }, [rotation, imgWidth, imgHeight, radius, angleStep]);
 
   return (
-    <div className={styles.bodyy}>
+    <div className={styles.bodyy} id='caraousal'>
       <div id="drag-container" className={styles.dragContainer} ref={dragRef}>
         <div id="spin-container" className={styles.spinContainer} ref={spinRef}>
-        <Link to="/checkOutForm?course=UI-UX" target="_blank" rel="noopener noreferrer">
+        <Link to="/checkOutForm?course=UI-UX" rel="noopener noreferrer">
   <img src="/ui-ux.jpg" alt="UI/UX course" className='object-cover w-[100%] h-[100%]' />
 </Link>
 
-<Link to="/checkOutForm?course=WebDev" target="_blank" rel="noopener noreferrer">
+<Link to="/checkOutForm?course=WebDev"  rel="noopener noreferrer">
   <img src="/webDev4.jpg" alt="Web Development course" />
 </Link>
 
-<Link to="/checkOutForm?course=AppDev" target="_blank" rel="noopener noreferrer">
+<Link to="/checkOutForm?course=AppDev"  rel="noopener noreferrer">
   <img src="/AppDev.jpg" alt="App Development course" />
 </Link>
 

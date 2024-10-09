@@ -51,11 +51,11 @@ function App() {
 
 
 
-
   const [alertMsg, setAlertMsg] = useState(localStorage.getItem("alertMsg"));
   const [alertColor, setAlertColor] = useState(
     localStorage.getItem("alertColor")
   );
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -67,8 +67,9 @@ function App() {
     { title: "About Us", link: "about", type: "Link" },
     { title: "Blogs", link: "/BlogHome", type: "NavLink" },
     { title: "Courses", link: "/Courses", type: "NavLink" },
+    {title:"Services", link:"/Services",type:"NavLink"},
     { title: "Contact Us", link: "contactuspage", type: "Link" },
-    {title:"Services", link:"/Services",type:"NavLink"}
+    
   ];
  
 

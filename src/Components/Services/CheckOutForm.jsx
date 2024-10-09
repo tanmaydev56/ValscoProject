@@ -3,11 +3,19 @@ import "../Footer/Footer.css";
 import { createDoc } from "../../Firebase_Config/firebaseConfig";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import ServiceNavBar from "../../Components/Navbars/ServiceNavBar"
 import { useLocation } from "react-router-dom";
+import HomeNav from "../Navbars/HomeNav";
 const backendURL = "https://mailing-backend.onrender.com";
 
 const CheckOutForm = () => {
+  
+  const serviceNav1 = [
+    { title: "Home", link: "/", type: "NavLink" },
+    { title: "Contact Us", link: "contactuspage", type: "Link" },
+    { title: "Services", link: "/Services", type: "NavLink" },
+
+  ];
   const [newContact, setNewContact] = useState({
     name: "",
     email: "",
@@ -20,7 +28,13 @@ const CheckOutForm = () => {
   const [sending, setSending] = useState(false);
   const [isValid, setIsValid] = useState(true);
   // const [isSuccess, setIsSuccess] = useState(false);
-
+  const [authenticated, setAuthenticated] = useState(
+    localStorage.getItem("authenticated")
+  );
+   const [alertMsg, setAlertMsg] = useState(localStorage.getItem("alertMsg"));
+  const [alertColor, setAlertColor] = useState(
+    localStorage.getItem("alertColor")
+  );
  
 
   const handleOnChange = (e) => {
@@ -32,7 +46,10 @@ const CheckOutForm = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setSending(true);
+    setSending(true); 
+     
+     
+    
     try {
       newContact.name = newContact.name.trim();
       newContact.email = newContact.email.trim();
@@ -72,10 +89,30 @@ const CheckOutForm = () => {
       setNewContact((prevContact) => ({ ...prevContact, course }));
     }
   }, [location.search]);
+  const linkList = [serviceNav1]
 
   return (
     <>
+       <ServiceNavBar
+              navList={serviceNav1}
+              authenticated={authenticated}
+              setAuthenticated={setAuthenticated}
+              alertMsg={alertMsg}
+              setAlertMsg={setAlertMsg}
+              alertColor={alertColor}
+              setAlertColor={setAlertColor}
+             linksList={linkList[0]}
+              
+               
+              />
       <section id="contactuspage" className={`contact-section flex `}>
+        {/* <HomeNav/> */}
+     
+        <Link to="/Services">
+  <button className="bg-black text-white py-2 px-4  rounded-full ">
+    <img src="/back.svg" className="h-7 w-7 " alt="" />
+  </button>
+</Link>
         <div className="subheadings-1">
           <span>FUEL.</span>
           <span>ELEVATE.</span> <span>IGNITE YOUR</span>
@@ -138,7 +175,7 @@ const CheckOutForm = () => {
               placeholder="Your Phone Number"
               name="number"
               required
-              pattern="^(?:\\+91|91|0)?[6-9]\\d{9}$"
+              pattern="^(?:\+91|91|0)?[6-9]\d{9}$"
               className="p-3 border border-gray-300 rounded-md bg-black focus:outline-none"
             />
           </div>

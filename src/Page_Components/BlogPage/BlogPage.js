@@ -24,31 +24,6 @@ const BlogPage = (props) => {
   }, [ID,getSinglePost]);
 
   const { title, postText, author, publishDate, ImgSrc } = singleBlog;
-  if (isSingleLoading === true) {
-    return (
-      <div className="loader">
-        <div className="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    );
-  }
-
-  if (temp === true) {
-    return (
-      <div className="loader">
-        <div className="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    );
-  }
   const deleteBlog = async (id) => {
     setTemp(true);
     if (ImgSrc) {
