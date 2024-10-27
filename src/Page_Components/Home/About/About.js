@@ -62,20 +62,7 @@ const About = () => {
         </div>
       </section>
       <section className="members">
-        <div className="member-card">
-          <div className="member-img">
-            <img src={AB_DP} className="member-dp" alt="y" />
-          </div>
-          <div className="member-desc">
-            <h4>Ayan Bhowal</h4>
-            <h5>Co-founder</h5>
-            <p>
-              Ayan Bhowal is our approachable, dependable, and vastly talented
-              Director. With his composed and collected demeanor and persistent
-              drive, Valsco is positioned to prosper and thrive.
-            </p>
-          </div>
-        </div>
+       
         <div className="member-card">
           <div className="member-img">
             <img src={SA_DP} className="member-dp" alt="y" />

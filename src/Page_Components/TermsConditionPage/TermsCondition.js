@@ -1098,7 +1098,7 @@ const TermsAndConditionPageBody = () => {
                   <b>India</b>
                 </li>
                 <li>
-                  <b>connect@valscotech.com</b>
+                <a className="text-blue-700 " href="mailto:connect@valscotech.com">connect@valscotech.com</a>
                 </li>
               </ul>
             </p>

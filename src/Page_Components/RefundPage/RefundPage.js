@@ -57,7 +57,8 @@ const RefundPageBody = () => {
           <h2>Process for Cancellation:</h2>
           <p>
             To cancel a registration, participants must contact our customer
-            support team via email at support@valsco.com. Our customer support
+            support team via email at  <a className="text-blue-700" href="mailto:connect@valscotech.com">connect@valscotech.com</a> 
+            {" "} Our customer support
             team is available Monday to Friday, 9 am to 5 pm.
           </p>
         </section>
@@ -91,7 +92,7 @@ const RefundPageBody = () => {
           <h2>Contact Information:</h2>
           <p>
             For inquiries or assistance with registration cancellations, please
-            contact our customer support team at support@valsco.com, Monday to
+            contact our customer support team at {" "}<a className="text-blue-700" href="mailto:connect@valscotech.com">connect@valscotech.com</a> {" "} , Monday to
             Friday, 9 am to 5 pm.
           </p>
         </section>

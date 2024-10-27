@@ -30,6 +30,7 @@ import TermsAndConditionPageBody from "./Page_Components/TermsConditionPage/Term
 
 import NewService from "./Components/Services/NewService.jsx";
 import CategoryGrid from "./Components/Services/IconMenu.jsx";
+import ConfirmWindow from "./Components/Services/ConfirmWindow.jsx";
 
 
 
@@ -149,7 +150,7 @@ function App() {
               {/* <Servicessec /> */}
               <NewService/>
           
-              {/* <AppleCardsCarouselDemo/> */}
+              {/* <AppleCardsCarouselDemo/>    */}
               <div className="translate-y-[-150px] lg:translate-y-[0px]">
               <CategoryGrid/>
               </div>
@@ -360,6 +361,7 @@ function App() {
             </>
           }
         />
+         
         <Route
           path="/RegisterCourse"
           element={
@@ -389,6 +391,7 @@ function App() {
         <Route exact path="/success" element={<Success />} />
         <Route exact path="/failure" element={<Failure />} />
         <Route path="/checkOutForm" element={<CheckOutForm />} />
+        <Route path="/confirmWindow" element={<ConfirmWindow />} />
       </Routes>
     </Router>
     // <CategoryGrid/>
